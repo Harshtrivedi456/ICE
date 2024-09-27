@@ -1,0 +1,31 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+vector<int> deltaDemod(vector<int>& inptsignal, int size) {
+    vector<int> opt;
+    int prevvalue = 0;  
+    for (int i = 0; i < inptsignal.size(); i++) {
+        if (inptsignal[i] == 1) {
+            prevvalue += size;  
+        } else {
+            prevvalue -= size;  
+        }
+        opt.push_back(prevvalue);
+    }
+
+    return opt;
+}
+
+int main() {
+    vector<int> inptsignal = {0, 1, 1, 1, 1, 1, 0, 0, 0};  
+    int size = 1;  
+
+
+    vector<int> optsignal = deltaDemod(inptsignal, size);
+    for (int i = 0; i < optsignal.size(); i++) {
+        cout << optsignal[i] << " ";
+    }
+    cout << endl;
+
+}
