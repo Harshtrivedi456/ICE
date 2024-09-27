@@ -1,0 +1,42 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+
+vector<int> adapMod(vector<int>& inpt, int size, int bal) {
+    vector<int> modulated;
+    int previousValue = 0;   
+    int Size =size;
+
+    for (int i = 0; i < inpt.size(); i++) {
+        if (inpt[i] > previousValue) {
+            modulated.push_back(1);  
+            previousValue += Size;
+            Size += bal;  
+        } else {
+            modulated.push_back(0);  
+            previousValue -= Size;
+            Size += bal;  
+        }
+        
+        if (i > 0 && modulated[i] != modulated[i-1]) {
+            Size = max(size, Size - bal);  
+        }
+    }
+    
+    return modulated;
+}
+
+int main() {
+    vector<int> inpt = {0, 1, 4, 8, 12, 18, 15, 10, 5};   
+    int size = 1;  
+    int bal = 1;  
+    vector<int> opt = adapMod(inpt, size, bal);
+
+    for (int i = 0; i < opt.size(); i++) {
+        cout << opt[i] << " ";
+    }
+    cout << endl;
+
+    
+}
