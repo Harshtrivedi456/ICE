@@ -1,0 +1,33 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+vector<int> DeltaMod(vector<int>&inpt, int size) {
+    vector<int> opt;
+    int prevvalue = 0;  
+
+    for (int i = 0; i < inpt.size(); i++) {
+        if (inpt[i] > prevvalue) {
+            opt.push_back(1);  
+            prevvalue += size;
+        } else {
+            opt.push_back(0);  
+            prevvalue -= size;
+        }
+    }
+
+    return opt;
+}
+
+int main() {
+    vector<int>inpt = {0, 1, 3, 6, 8, 10, 7, 4, 1};   
+    int size = 1;  
+    vector<int> modulated = DeltaMod(inpt,size);
+
+    for (int i = 0; i < modulated.size(); i++) {
+        cout << modulated[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
