@@ -3,7 +3,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=harshtrivedi456&label=Profile%20views&color=0e75b6&style=flat" alt="harshtrivedi456" /> </p>
 
-- 👨‍💻 All of my projects are available at [https://www.linkedin.com/in/harsh-trivedi-5537b3286/details/projects/](https://www.linkedin.com/in/harsh-trivedi-5537b3286/details/projects/)
+- 👨‍💻 My projects are available at (https://www.linkedin.com/in/harsh-trivedi-5537b3286/details/projects/)
 
 - 📫 How to reach me **harshtrivedi561@gmail.com**
 
